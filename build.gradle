@@ -1,6 +1,3 @@
-// Reflects the 26.1 Fabric toolchain (official mappings, no-remap Loom, Java 25)
-// with split client/main source sets. Verify the Loom plugin version and DSL against
-// https://fabricmc.net/develop/ and the example mod https://github.com/FabricMC/fabric-example-mod
 plugins {
     id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'  // confirm current version on Fabric Develop
     id 'maven-publish'
@@ -23,7 +20,7 @@ loom {
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings()
+    // No `mappings` line: 26.1+ is unobfuscated, so there is nothing to remap.
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
