@@ -3,6 +3,7 @@
   "id": "autoreconnect",
   "version": "${version}",
   "name": "AutoReconnect",
+  "icon": "assets/autoreconnect/icon.png",
   "description": "Rejoins your server if disconnected.",
   "license": "MIT",
   "environment": "client",
